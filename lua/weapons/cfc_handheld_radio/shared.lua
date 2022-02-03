@@ -35,12 +35,12 @@ if CLIENT then
         if not handheldActive or handheldVguiExists then return end
 
         local resX, resY    = ScrW(), ScrH()
-        local scale         = 0.7
+        local scale         = 2.7
         local padding       = 10
 
         local tunerBase     = vgui.Create( "DFrame" )
         tunerBase:SetSize( ( resX / scale ) - padding, ( resY / scale ) - padding )
-        tunerBase:SetPos( ResX - ( tunerBase:GetWide( ) / 2 ) - padding, ResY - ( tunerBase:GetWide( ) / 2 ) - padding )
+        tunerBase:SetPos( ( resX - tunerBase:GetWide( ) ) - padding, ( resY - tunerBase:GetTall( ) ) - padding )
         tunerBase:SetVisible( true ) 
         tunerBase:SetDraggable( true )
         tunerBase:MakePopup( )
